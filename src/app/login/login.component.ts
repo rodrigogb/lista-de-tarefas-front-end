@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
     } else {
       this.invalidLogin = false;
       // Redirect to WelcomePage
-      this.router.navigate(['welcome'])
+      this.router.navigate(['welcome', this.username])
     }
   }
 

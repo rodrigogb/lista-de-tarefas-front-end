@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { ErrorComponent } from './error/error.component';
+import { ListTodosComponent } from './list-todos/list-todos.component';
 
 // welcome
 const routes: Routes = [
@@ -10,7 +11,8 @@ const routes: Routes = [
   // caso nao exista o path (**) o app redireciona pro ErrorComponent
   { path:'', component: LoginComponent },
   { path:'login', component: LoginComponent },
-  { path:'welcome', component: WelcomeComponent },
+  { path:'welcome/:name', component: WelcomeComponent },
+  { path:'todos', component: ListTodosComponent },
   { path:'**', component: ErrorComponent } 
 ];
 
