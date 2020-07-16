@@ -1,6 +1,6 @@
 <h1>Welcome</h1>
 <h1>to do list</h1>
-<small *ngIf="errorLogin" >Wrong Credentials</small>
+<small *ngIf='invalidLogin'>{{errorMessage}}</small>
 <div>
     User Name : <input type="text" name="username" [(ngModel)]="username">
     Password  : <input type="password" name="password" [(ngModel)]="password">
