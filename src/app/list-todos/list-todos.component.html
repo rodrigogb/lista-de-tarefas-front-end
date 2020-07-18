@@ -10,7 +10,7 @@
     <tbody>
         <tr *ngFor="let todo of todos">
             <td>{{todo.description}}</td>
-            <td>{{todo.targetDate | date}}</td>
+            <td>{{todo.targetDate | date}}</td> <!--pipe | formata a exibicao de dados-->
             <td>{{todo.done}}</td>
         </tr>
     </tbody>
