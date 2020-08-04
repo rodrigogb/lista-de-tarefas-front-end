@@ -14,10 +14,15 @@ export class TodoDataService {
   retrieveAllTodos(userName) {
     return this.http.get<Todo[]>(`http://localhost:8090/users/${userName}/todos`);
  
-   }
+  }
 
-   deleteTodo(userName, id) {
+  deleteTodo(userName, id) {
      return this.http.delete(`http://localhost:8090/users/${userName}/todos/${id}`)
-   }
+  }
+
+  retrieveTodo(userName, id) {
+    return this.http.get<Todo>(`http://localhost:8090/users/${userName}/todos/${id}`)
+  
+  }
 
 }
