@@ -39,7 +39,7 @@ export class ListTodosComponent implements OnInit {
   }
 
   refreshTodos() {
-    this.todoService.retrieveAllTodos('rodrigo').subscribe(
+    this.todoService.retrieveAllTodos('in28Minutes').subscribe(
       response => {
         console.log(response);
         this.todos = response;
@@ -62,6 +62,10 @@ export class ListTodosComponent implements OnInit {
     console.log(`update todo ${id}`)
     this.router.navigate(['todos', id])
     
+  }
+
+  addTodo() {
+    this.router.navigate(['todos', -1])
   }
 
 }

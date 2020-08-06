@@ -18,9 +18,12 @@
                 <td>{{todo.description}}</td>
                 <td>{{todo.targetDate | date}}</td> <!--pipe | formata a exibicao de dados-->
                 <td>{{todo.done}}</td>
-                <td><button (click)="updateTodo(todo.id)" class="btn btn-success">Update</button></td>
-                <td><button (click)="deleteTodo(todo.id)" class="btn btn-warning">Delete</button></td>
+                <td><button (click)="updateTodo(todo.id)" class="btn btn-dark">Update</button></td>
+                <td><button (click)="deleteTodo(todo.id)" class="btn btn-danger">Delete</button></td>
             </tr>
         </tbody>
     </table>
+    <div class="row">
+        <button (click)="addTodo()" class="btn btn-success">Add</button>
+    </div>
 </div>
